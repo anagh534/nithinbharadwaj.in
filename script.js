@@ -18,7 +18,7 @@ function renderWorks(filter) {
         
         article.innerHTML = `
             <div class="work-card__image">
-                <img src="${work.image}" alt="Cinematic production still" />
+                <img src="${work.image}" alt="Cinematic production still" loading="lazy" />
                 <div class="work-card__veil"></div>
                 <span class="work-card__code">${work.code}</span>
                 <span class="work-card__play"><i data-lucide="play" fill="currentColor"></i></span>
