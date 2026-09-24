@@ -128,7 +128,5 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
     e.target.reset();
 });
 
-document.getElementById("trailer-btn").addEventListener("click", () => {
-    showToast("Trailer archive is being prepared.");
-});
+
 
