@@ -124,7 +124,20 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
         return;
     }
     
-    showToast("Your inquiry is ready to send. Nithin will be in touch soon.");
+    const whatsappNumber = "919482109265";
+    const formattedText = `*New Inquiry from Website*
+*Name:* ${name.trim()}
+*Email:* ${email.trim()}
+
+*Message:*
+${message.trim()}`;
+    
+    const encodedText = encodeURIComponent(formattedText);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    showToast("Redirecting to WhatsApp...");
     e.target.reset();
 });
 
